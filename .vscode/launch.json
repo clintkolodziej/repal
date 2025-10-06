@@ -1,0 +1,122 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        //
+        // PAL22V10 Tests
+        //
+
+        {
+            "name": "Python Debugger: pal22v10 Midway_A-16217_GAL22V10.bin",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "pdp.py",
+            "console": "integratedTerminal",
+            "args": "-d pal22v10 \"./PLD/PAL22V10/NBA Jam/Midway_A-16217/Midway_A-16217_GAL22V10.bin\"",
+            "cwd": "${fileDirname}" 
+        },
+        {
+            "name": "Python Debugger: pal22v10 SvG_cart_HH_U15.bin",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "pdp.py",
+            "console": "integratedTerminal",
+            "args": "-d pal22v10 \"./PLD/PAL22V10/Spectral Vs Generation/SvG_cart_HH_U15/SvG_cart_HH_U15.bin\"",
+            "cwd": "${fileDirname}" 
+        },
+        {
+            "name": "Python Debugger: pal22v10 SvG_cart_HH_U21.bin",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "pdp.py",
+            "console": "integratedTerminal",
+            "args": "-d pal22v10 \"./PLD/PAL22V10/Spectral Vs Generation/SvG_cart_HH_U12/SvG_cart_HH_U21.bin\"",
+            "cwd": "${fileDirname}" 
+        },
+        {
+            "name": "Python Debugger: pal22v10 SvG_cart_HH_U34.bin",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "pdp.py",
+            "console": "integratedTerminal",
+            "args": "-d pal22v10 \"./PLD/PAL22V10/Spectral Vs Generation/SvG_cart_HH_U34/SvG_cart_HH_U34.bin\"",
+            "cwd": "${fileDirname}" 
+        },
+
+        //
+        // PAL16V8 Tests
+        //
+
+        {
+            "name": "Python Debugger: pal16v8 Midway_A-5346-40025-9_GAL16V8.bin",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "pdp.py",
+            "console": "integratedTerminal",
+            "args": "-d pal16v8 \"./PLD/PAL16V8/Mortal Kombat/Midway_Y-Unit_U18/Midway_A-5346-40025-9_GAL16V8.bin\"",
+            "cwd": "${fileDirname}" 
+        },
+        {
+            "name": "Python Debugger: pal16v8 Midway_Y-Unit_U41.bin",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "pdp.py",
+            "console": "integratedTerminal",
+            "args": "-d pal16v8 \"./PLD/PAL16V8/Mortal Kombat/Midway_Y-Unit_U41/Midway_Y-Unit_U41.bin\"",
+            "cwd": "${fileDirname}" 
+        },
+        {
+            "name": "Python Debugger: pal16v8 Midway_Y-Unit_U42.bin",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "pdp.py",
+            "console": "integratedTerminal",
+            "args": "-d pal16v8 \"./PLD/PAL16V8/Mortal Kombat/Midway_Y-Unit_U42/Midway_Y-Unit_U42.bin\"",
+            "cwd": "${fileDirname}" 
+        },
+        {
+            "name": "Python Debugger: pal16v8 Midway_A-17748.bin",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "pdp.py",
+            "console": "integratedTerminal",
+            "args": "-d pal16v8 \"./PLD/PAL16V8/Mortal Kombat II/Midway_A-17748/Midway_A-17748.bin\"",
+            "cwd": "${fileDirname}" 
+        },
+        {
+            "name": "Python Debugger: pal16v8 Zombie_Raid_FY003.bin",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "pdp.py",
+            "console": "integratedTerminal",
+            "args": "-d pal16v8 \"./PLD/PAL16V8/Zombie Raid/Zombie_Raid_FY003/Zombie_Raid_FY003.bin\"",
+            "cwd": "${fileDirname}" 
+        },
+
+        //
+        // PAL16V8 PETE Tests
+        //
+
+        {
+            "name": "Python Debugger: ORIGINAL Test pal16v8 Zombie_Raid_FY003.bin",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "pete.py",
+            "console": "integratedTerminal",
+            "args": "\"./PLD/PAL16V8/Zombie Raid/Zombie_Raid_FY003/Zombie_Raid_FY003.bin\"",
+            "cwd": "${fileDirname}" 
+        },
+        {
+            "name": "Python Debugger: Current File with Arguments",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": "${command:pickArgs}",
+            "cwd": "${fileDirname}" 
+        }
+    ]
+}

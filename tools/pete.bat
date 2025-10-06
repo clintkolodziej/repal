@@ -1,0 +1,19 @@
+@echo off
+setlocal EnableDelayedExpansion
+
+set folder=%~1
+set toolspath=%~dp0\..\tools
+SET PETE="%toolspath%\pete\pete.py"
+
+for /r "%folder%" %%v in (*.bin) do (
+
+    SET FILEPATH=%%~dv%%~pv%%~nv
+    SET FILENAME=%%~nv
+
+    echo.
+    echo !FILEPATH!.bin
+
+    echo.     Generating PLD [pete]: !FILENAME!.pete.pld
+    py %PETE% -p "i1,i2,i3,i4,i5,i6,i7,i8,i9,i11,o12,o13,o14,o15,o16,o17,o18,o19" "!FILEPATH!.bin"
+
+)

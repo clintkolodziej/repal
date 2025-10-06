@@ -1,0 +1,21 @@
+@echo off
+setlocal EnableDelayedExpansion
+
+set folder=%~1
+set toolspath=%~dp0\..\tools
+SET JEDUTIL="%toolspath%\jedutil\jedutil.exe"
+
+SET DEVICETYPE=gal16v8
+
+for /r "%folder%" %%v in (*.jed) do (
+
+    SET FILEPATH=%%~dv%%~pv%%~nv
+    SET FILENAME=%%~nv
+
+    echo.
+    echo !FILEPATH!.jed
+
+    echo.     Extracting Jed Equations [jedutil]: !FILENAME!.jedutil.txt
+    %JEDUTIL% -view "!FILEPATH!.jed" !DEVICETYPE! > "!FILEPATH!.jedutil.txt" 
+
+)
