@@ -1,14 +1,11 @@
 # repal (Reverse engineering software for PAL/GAL devices)
 
-  
-
 This software is designed as a modular platform for reverse engineering PAL/GAL type devices that are brute-force dumped using EPROM adapters to produce raw combinatorial dumps of pin input/outputs. Initially this has been tested with PAL16V8 and PAL22V10 devices and their corresponding adapters. Devices are configured via a config file so this will allow other device support to be easily added and tested. The software name is based on the idea of reproduction game cartridges (aka "repro"s), but for PAL devices. :)
 
-  
 
 # Usage
 
-  ## Basic Workflow
+## Basic Workflow
 
 1. Download the latest release from the project's releases page:
 
@@ -37,7 +34,7 @@ This software is designed as a modular platform for reverse engineering PAL/GAL 
     ``
 
 8. Write the .jed file to the GAL using a compatible programmer and test the device works as expected
-  
+
 
 ## Command Options
 
@@ -90,21 +87,49 @@ An advanced example with all options that will read the same file as above, but 
 py repal.py --truthtable --polarity="negative" --oepolarity="positive" --devicetype="pal22v10" --profiles="C:\repal\custom-profiles.config" "C:\dumps\igs-pgm-svg-hh-u15.bin"
 ```
 
-  
+
+# EPROM PAL Adapters
+
+Below are some adapters that should work with this software:
+
+## Gerbers
+
+- Johann Hanne's palrvs GAL16V8 adapter: https://github.com/jonnyh64/palrvs/tree/main/palrvs_kicad
+
+- Fluffy's GAL22V10 adapter: https://www.arcade-projects.com/attachments/plddump22v10-zip.164131/
+
+
+## Schematics
+
+- Charles MacDonald's GAL16V8 adapters: http://dreamjam.co.uk/emuviews/files/adapter-v2-cap.png
+
+- Johann Hanne's palrvs GAL16V8 adapter: https://github.com/jonnyh64/palrvs/blob/main/palrvs_schematic.png
+
+- Fluffy's GAL22V10 adapter: https://www.arcade-projects.com/attachments/plddump22v10-pdf.164125/
+
+
+# References
+
+- GAL16V8 Datasheet: https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/1029/GAL16V8.pdf
+
+- GAL22V10 Datasheet: https://www.digikey.com/htmldatasheets/production/984930/0/0/1/gal22v10.pdf
+
+- JEDEC information: https://k1.spdns.de/Develop/Projects/GalAsm/info/galer/jedecfile.html
+
+- jedutil source: https://github.com/mamedev/mame/blob/master/src/tools/jedutil.cpp
+
+- Discussions on GAL22V10 adapters related to IGS PGM cartridges: https://www.arcade-projects.com/threads/any-suggestions-on-reviving-a-failed-svg-igs-pgm-cart.30784/#post-433962
+
 
 # Credits
 
-  
-
 Thanks to the following people:
-
-  
 
 - Johann Hanne for creating the excellent palrvs tool for pal16v8 that this software is based upon (https://github.com/jonnyh64/palrvs)
 
 - Charles MacDonald for the inital EPROM adapter idea, schematics, and pa.exe tool (http://techno-junk.org/readpal.php)
 
-- Aaron Giles for creating jedutil, which is included with MAME, a great resource for verifying equations from raw JED files (https://aarongiles.com/)
+- Aaron Giles for creating jedutil, which is included with MAME, a great resource for verifying equations from raw JED files (https://github.com/mamedev/mame/blob/master/src/tools/jedutil.cpp)
 
 - Tim Merrell ("gc8tech") for the great idea to write this for the purpose of dumping larger GAL/PAL chips from IGS PGM game cartridges to aid in preservation, and listening to all my questions and rants when things were breaking during development (https://igspgm.com/)
 
